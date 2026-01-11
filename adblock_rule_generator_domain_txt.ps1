@@ -1,5 +1,6 @@
+# URL 列表
 $urlList = @(
-"https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",  
+    "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",  
 "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt",  
 "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt",  
 "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt",  
@@ -216,31 +217,20 @@ foreach ($domain in $excludedDomains) {
 # 排除所有白名单规则中的域名
 $finalRules = $validRules | Where-Object { -not $validExcludedDomains.Contains($_) }
 
-# 对规则进行排序并添加前缀和后缀
-$formattedRules = $finalRules | Sort-Object | ForEach-Object {
-    $quote = "`""
-    "$quote" + "$_$quote,"
-}
+# 对规则进行排序
+$sortedRules = $finalRules | Sort-Object
 
-
-# 移除最后一条规则的逗号
-if ($formattedRules.Count -gt 0) {
-    $formattedRules[-1] = $formattedRules[-1].TrimEnd(',')
-}
-
+# 将每条规则格式化为纯域名（去掉引号、逗号）
+$formattedRules = $sortedRules | ForEach-Object { "$_" }
 
 # 统计生成的规则条目数量
 $ruleCount = $finalRules.Count
-
-
-
 
 # 获取当前时间并转换为东八区时间
 $generationTime = (Get-Date).ToUniversalTime().AddHours(8).ToString("yyyy-MM-dd HH:mm:ss")
 
 # 创建文本格式的字符串
 $textContent = @"
-
 $($formattedRules -join "`n")
 "@
 
