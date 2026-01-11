@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Setup Node.js 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
     - name: Checkout repository
       uses: actions/checkout@v3
 
@@ -31,14 +26,24 @@ jobs:
     - name: Run adblock_rule_generator_domain_txt.ps1
       run: pwsh -File ./adblock_rule_generator_domain_txt.ps1
 
+    - name: Verify JSON file is generated
+      run: |
+        if [ -f ./adblock_reject_domain.json ]; then
+          echo "JSON file generated successfully!"
+        else
+          echo "JSON file not generated. Please check the script."
+          exit 1
+        fi
+
     - name: Force Add and Commit Txt file
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git add -f adblock_reject_domain.txt
-        git commit -m 'Update adblock_reject_domain.txt' || git commit --allow-empty -m 'Empty commit to force push'
+        git add -f adblock_reject_domain.json
+        git commit -m 'Update adblock_reject_domain.txt and adblock_reject_domain.json' || git commit --allow-empty -m 'Empty commit to force push'
 
-    - name: Retry Push Txt file
+    - name: Retry Push Txt and JSON files
       env:
         TOKEN: ${{ secrets.TOKEN }}
       run: |
