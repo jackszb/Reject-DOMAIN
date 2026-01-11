@@ -241,3 +241,19 @@ $textContent | Out-File -FilePath $outputPath -Encoding utf8
 # 输出生成的有效规则总数
 Write-Host "生成的有效规则总数: $ruleCount"
 Add-Content -Path $logFilePath -Value "Total entries: $ruleCount"
+
+# 生成 sing-box JSON 文件
+$singboxJson = @{
+    "version" = 3
+    "rules" = @(
+        @{
+            "domain_suffix" = $sortedRules
+        }
+    )
+}
+
+# 写入 JSON 文件
+$jsonOutputPath = "$PSScriptRoot/adblock_reject_domain.json"
+$singboxJson | ConvertTo-Json -Depth 3 | Out-File -FilePath $jsonOutputPath -Encoding utf8
+
+Write-Host "生成完成: $outputPath 和 $jsonOutputPath，共 $ruleCount 个域名"
