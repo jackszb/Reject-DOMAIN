@@ -20521,6 +20521,7 @@ at-cdn.swisscom.ch
 at-go.experian.com
 at-o.net
 at.agentcrate.com
+at.artistchai.co.kr
 at.attualityofficial.com
 at.badische-zeitung.de
 at.campaign.daimlertruck.com
@@ -33283,6 +33284,7 @@ data.aquilis.tech
 data.armexdef.uk
 data.artangels.net
 data.articles.ringcentral.com
+data.artistchai.co.kr
 data.artnekretnine.com
 data.aschito.com
 data.ashbourne-co.com
@@ -35721,6 +35723,7 @@ dlog.perfectworldgames.com
 dlog.pwsdk.com
 dlp.egghead.link
 dlqxtm.sssports.com
+dls-account.di.atlas.samsung.com
 dls-b23-link.ip.twelve99.net.iberostar.com
 dls-ddc.dqa.samsung.com
 dls2s.appsflyer.com
@@ -36766,6 +36769,7 @@ easter-analytics.com
 eastman.tt.omtrdc.net
 eastus2-10.cloud.s11.sfmc-osl.com
 easwaran.bmcm.org
+easy-monetization.s3.yandex.net
 easy.fixoem.com
 easy.gameanalytics.com
 easy.sentinelgroup.com
@@ -100544,7 +100548,6 @@ kafka.loanzify.app
 kaghyg.alpina-water.co.jp
 kagjin.bottegaverde.it
 kahdz.carechanges.com
-kai5741.xyz
 kaiseki-website.com
 kaiser.tt.omtrdc.net
 kaixinhaoren99.foolhardywear.pro
@@ -100580,6 +100583,7 @@ kaqzb.fatbikeskopen.nl
 karam903.foolhardywear.pro
 karfa.fumblingvacation.pro
 karlschumacher.actonservice.com
+karrot-pixel.business.daangn.com
 kascb.jamsworld.com
 kashmirtouris.xhamsterlive.info
 kasikornbankpublicco.tt.omtrdc.net
@@ -102107,6 +102111,7 @@ lgbdxo.azazie.com
 lgbt.superchatlive.com
 lgcns.goldenplanet.co.kr
 lgdpf.roark.com
+lgecokr.api.useinsider.com
 lgelectronics.tt.omtrdc.net
 lgforbes.akamaized.net
 lghnh.tt.omtrdc.net
@@ -122111,7 +122116,13 @@ paginasamarillas.tt.omtrdc.net
 paginaseloqua.unisabana.edu.co
 pagonxt.tt.omtrdc.net
 pahangdaily.foolhardywear.pro
+pahtbt.tech
+pahter.tech
+pahtlf.tech
 pahtpw.tech
+pahtsx.tech
+pahtuo.tech
+pahtuz.tech
 paiement.cb4x.fr
 painmueblesner.net.daraz.com
 paintersusainc.actonservice.com
@@ -123787,6 +123798,7 @@ play.takaboss.online
 play.underdogfantasy.com
 play.wavelength.zone
 play.zin99.co
+player-analytics.mp.lura.live
 player-feedback.p7s1video.net
 player-telemetry.vimeo.com
 player.resonance.pk
@@ -156237,6 +156249,7 @@ trk2.informatech.com
 trk2.pinterest.com
 trkapi.impact.com
 trkcare.hmhn.org
+trkcliq.com
 trkcmb.business.algeria.hsbc.com
 trkcmb.business.hsbc.ae
 trkcmb.business.hsbc.co.in
